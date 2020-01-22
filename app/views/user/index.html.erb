@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LossLess</title>
+  <link rel="stylesheet" href="index" media="screen" title="no title" charset="utf-8">
+
+</head>
+
+<body>
+  <center>
+    <font color="white" face="Meiryo"><h1><br>LossLess<br>ユーザ一覧画面</h1></font>
+  <div style="border: none;">
+      <%= link_to("/user/new") do %> 
+      <input type="submit" class ="com" value="新規管理者登録">
+    <% end %>
+  </div>
+
+  <div class="product" style="margin-top:-170px; margin-bottom: 1.5em; width:300px;">
+    <!--<select size="10" maxlength="32" style="width:500px;" > -->
+      <table border= "1" width="720" cellspacing="0" cellpadding="5" >
+        <% @user.each do |user| %>
+         <div class="item1">
+          <ul value="<%= user.id %>">
+            <li class="inline-block"><%= user.admin_name %>
+          </ul>
+    
+          </div>
+        <% end %>
+      </table>
+   <!-- </select> -->
+  </div>
+
+<div style="border: none;">
+  <%= link_to("/product/all_index") do %>
+     <input type="submit" class="com" value="戻る">
+  <% end %>
+
+  <input id="delete" type="submit" data-target="con1" class="modal_open com not_select" value="削除">
+    </div>
+</center>
+<div id="con1" class="modal_content">
+    <p>本当に削除しますか？</p>
+    <input type="submit" class="modal_close com" value="いいえ">
+    <%= form_tag("/user/destroy") do %>
+      <input type="hidden" name="selected_item" id="send_data2">
+      <input type="hidden" name="admin" id="admin" value="<%= @current_user.id %>">
+      <input type="submit" class="modal_close com" value="はい">
+    <% end %>
+</div>
+</body>
+</html>

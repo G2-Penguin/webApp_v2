@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <title>LossLess_Login</title>
+  <link rel="stylesheet" href="base" media="screen" title="no title" charset="utf-8">
+  
+</head>
+<body>
+  <center>
+    <br><br><br><br><br><br><br><br><br>
+    <div id="login">
+      <br>
+      <div class="title" style="font-size:3em; font-family:Meiryo;">LossLess<br>LOGIN</div>
+      <% if @error_message %>
+          <div class="form_error">
+            <%= @error_message %>
+          </div>
+      <% end %>
+      <%= form_tag("/login", method: :post) do %>
+        <dl>
+          <dt>UserID</dt>
+          <dd><input type="text" name="uid" size="20" maxlength="32" autocomplete="OFF" ></dd>
+          <dt>Password</dt>
+          <dd><input type="password" name="pwd" size="20" maxlength="32" autocomplete="OFF" ></dd>
+        </dl>
+        <input type="submit" class="com" value="Login">
+      <% end %>
+    </div>
+    </center>
+  </body>
+</html>

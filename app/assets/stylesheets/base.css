@@ -1,0 +1,57 @@
+#login {
+  width: 600px;
+  height: 350px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),0 10px 10px rgba(0, 0, 0, .2);
+}
+
+.title {
+  background: #53B09A;
+  color: white;
+  width: 600px;
+  height: 150px;
+  margin-top: -25px;
+}
+
+.title h1 {
+  font-family: Meiryo;
+  margin-top: 50px;
+}
+
+dl dt{
+  font-family: Meiryo;
+  margin-left:100px;
+  width: 165px;
+  padding:10px 0;
+  float:left;
+  clear:both;
+}
+
+dl dd{
+  font-family: Meiryo;
+  margin-right:120px;
+  padding:5px 0;
+}
+
+
+.com {
+  font-family: Meiryo;
+  float: right;
+  margin: 10px;
+  width: 100px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #53B09A;
+  border: solid 2px #53B09A;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.com:hover {
+  background: #53B09A;
+  color: white;
+}
+
+h1 {
+  font-family: serif;
+}

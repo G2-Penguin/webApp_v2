@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LossLess</title>
+  <link rel="stylesheet" href="edit" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript">
+
+  </script>
+</head>
+
+
+
+<body>
+  <%= form_tag("/product/update") do %>
+  <center>
+    <font color="white" face="Meiryo"><h1><br>LossLess<br>商品情報変更画面</h1></font>
+    <div style="border:none;">
+      <br>
+    <dl>
+    <dt>商品名</dt>
+    <dd><input type="text" name="product_name" size="20" maxlength="20" autocomplete="OFF" value="<%=@name%>" ></dd>
+    <dt>割引率</dt>
+    <dd><input type="text" name="dis" size="20" maxlength="2" autocomplete="OFF" value="<%=@discount_rate%>"></dd>
+    <dt>個数</dt>
+    <dd><input type="text" name="count" size="20" maxlength="6" autocomplete="OFF" value="<%=@count%>"></dd>
+    <dt>カテゴリ</dt>
+    <dd><div class="cp_ipselect cp_sl03">
+      <select id="selectCategory" name="category" value="<%= @cateId %>" required>
+        <option value="" hidden>選択してください</option>
+        <option value="1">弁当</option>
+        <option value="2">惣菜</option>
+        <option value="3">生鮮食品</option>
+      </select>
+    </div>
+    </dd>
+    </dl>
+    <input type="hidden" name="selected_item" value="<%=@id%>">
+    <input class="com submit_button modal_open" data-target="con1" value="変更">
+    
+    
+    <div id="con1" class="modal_content">
+      <p>変更しますか？</p>
+      <input class="modal_close com submit_button" value="いいえ">
+      <input type="submit" class="modal_close com" value="はい">
+    </div>
+      <% end %>
+      <%= link_to("/product/all_index") do %>
+     <input type="submit" class="com" value="戻る">
+   <% end %>
+<script>
+  setCategory();
+</script>
+      </div>
+  </center>
+
+  </body>
+</html>

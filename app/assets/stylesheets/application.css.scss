@@ -1,0 +1,169 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.form_error {
+  color: #ff4d75;
+  height: 5%;
+  border-style:none;
+  margin-left: -50px;
+}
+
+
+
+/*モーダル用*/
+.modal_content {
+    position:fixed;
+    display:none;
+    z-index:2;
+    width:35%;
+    height:15%;
+    margin:0;
+    padding:10px 20px;
+    border:2px solid #aaa;
+    background:#fff;
+}
+ 
+.modal_content p {
+    margin:0;
+    padding:0;
+}
+ 
+.modal_overlay {
+    z-index:1;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:120%;
+    background-color:rgba(0,0,0,0.75);
+}
+ 
+
+ 
+.modal_open:hover {
+    cursor:pointer;
+}
+ 
+.modal_close {
+    color: #53B09A;
+}
+ 
+.modal_close:hover {
+    cursor:pointer;
+    color: white;
+}
+
+
+
+
+
+
+.item {
+     /* ulタグのデフォルトCSSを打ち消し */
+    list-style:  none;          /* ulタグのデフォルトCSSを打ち消し */
+    height:auto;
+	overflow:hidden;
+	float:left;
+	margin-bottom:0px;
+	/*background-color:Red;*/
+}
+
+.item1 {
+  /* ulタグのデフォルトCSSを打ち消し */
+  list-style:  none;          /* ulタグのデフォルトCSSを打ち消し */
+  height:auto;
+	overflow:hidden;
+	float:left;
+	margin-bottom:0px;
+	width:300px;
+	/*background-color:Red;*/
+}
+
+ul {
+  padding-left: 0px;
+}
+.item:active {
+  background-color: #3399FF;
+}
+
+.item1:active {
+  background-color: #3399FF;
+}
+
+ 
+.inline_block_name {
+    display: inline_block;      /* インラインブロック要素にする */
+  /*  background-color:  Gray;    /* 背景色指定 */
+    border-right: solid 1px;          /* 枠線指定 */
+    border-bottom: solid 1px;
+    padding:  10px;             /* 余白指定 */
+    white-space: nowrap;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  width:238px;
+  float:left;
+}
+.inline_block_130 {
+    display: inline_block;      /* インラインブロック要素にする */
+  /*  background-color:  Gray;    /* 背景色指定 */
+    border-right: solid 1px;          /* 枠線指定 */
+    border-bottom: solid 1px;
+    padding:  10px;             /* 余白指定 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:130px;
+    float:left;
+}
+.inline_block_100 {
+    display: inline_block;      /* インラインブロック要素にする */
+  /*  background-color:  Gray;    /* 背景色指定 */
+    border-right: solid 1px;          /* 枠線指定 */
+    border-bottom: solid 1px;
+    padding:  10px;             /* 余白指定 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100px;
+    float:left;
+}
+
+.inline_block {
+    display: inline_block;      /* インラインブロック要素にする */
+  /*  background-color:  Gray;    /* 背景色指定 */
+    border-right: solid 1px;          /* 枠線指定 */
+    border-bottom: solid 1px;
+    padding:  10px;             /* 余白指定 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    float:left;
+}
+
+.selected {
+  background-color: #3399FF;
+}
+
+.not_select {
+  visibility:hidden;
+}
+
+.submit_button {
+  text-align: center;
+  background-color: whitesmoke;
+}

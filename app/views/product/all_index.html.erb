@@ -1,0 +1,112 @@
+   <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LossLess</title>
+  <link rel="stylesheet" href="index" media="screen" title="no title" charset="utf-8">
+</head>
+
+
+<body>
+  <center>
+    <font color="white" face="Meiryo"><h1><br>LossLess<br>全商品一覧画面</h1></font>
+    <div style="border: none;">
+      <%= link_to("/logout", method: :post) do %>
+        <input type="submit" class="com" value="ログアウト">
+      <% end %>
+      <%= form_tag("/user/edit", method: :get) do %>
+        <!-- < session[:edit] = 1 %>    データ変更後にどのページへ戻るか判断するためのもの -->
+        <input type="submit" class="com" value="管理者情報変更">
+      <% end %>
+      
+      <% if session[:is_admin] %>
+        <%= link_to("/user/index") do %>
+          <input type="submit" class="com" value="ユーザ一覧">
+        <% end %>
+      <% end %>
+    </div>
+  
+  <div style="border:none;">
+  <table border="1" width="700" cellspacing="0" cellpadding="5" >
+    <thead>
+      <tr>
+        <th>商品名</th>
+        <th width="130px">値段</th>
+        <th width="130px">内容量</th>
+        <th width="100px">個数</th>
+        <th width="100px">カテゴリ</th>
+      </tr>
+    </thead> 
+  </table>
+  
+  <div class="product" style="margin-left:18px; margin-bottom: 1.5em;">
+    <!--<select size="10" maxlength="32" style="width:500px;" > -->
+      <table border= "1" width="720" cellspacing="0" cellpadding="5" >
+        <% @product.each do |product| 
+        if product.amount==nil
+          product.amount="-"
+        end
+        if product.category==nil
+          product.category="-"
+        end
+        if product.discount_rate != nil
+          @price = product.price - product.price * product.discount_rate / 100
+        else
+          @price = product.price
+        end
+        
+        %>
+        <div class="item">
+          <ul value="<%= product.id %>">
+            <li class="inline_block_name"><%= product.product_name %>
+            <li class="inline_block_130"><%= @price %>
+            <li class="inline_block_130"><%= product.amount %>
+            <li class="inline_block_100"><%= product.count %>
+            <li class="inline_block_100"><%= product.category %>
+          </ul>
+        </div>
+        <% end %>
+      </table>
+     <!-- </select> -->
+      </div>
+    </div>
+  
+    <div style="border:none; margin-top:5%;">
+      <%= link_to("/product/discounts_index") do %>
+         <input type="submit" class="com" value="割引商品">
+      <% end %>
+      <%= link_to("/product/all_index") do %>
+         <input type="submit" class="com all" value="全商品">
+      <% end %>
+      <br>
+      <%= form_tag("/product/search", method: :get ) do %>
+        <input id="sbox4" name="search_name" type="text" placeholder="検索したい商品名入力" />
+        <button id="sbtn4" type="submit"><i class="fas fa-search"></i></button>
+      <% end %>
+      <%= form_tag("/product/search", method: :get ) do %>
+        <input id="sbox4" name="search_name" type="text" placeholder="検索したいカテゴリ入力" />
+        <button id="sbtn4" type="submit"><i class="fas fa-search"></i></button>
+      <% end %>
+    
+      <br><a href="new.html"></a><a href="edit.html"></a>
+      <%= link_to("/product/new") do %>
+        <input type="submit" class="com" value="追加">
+      <% end %>
+      <%= form_tag("/product/edit") do%>
+        <input type="hidden" name="selected_item" id="send_data">
+        <input type="submit" class="com not_select" value="変更">
+      <% end %>
+      <input type="submit" data-target="con1" class="modal_open com not_select" value="削除">
+    </div>
+  </center>
+
+  <div id="con1" class="modal_content">
+      <p>本当に削除しますか？</p>
+      <input type="submit" class="modal_close com" value="いいえ">
+      <%= form_tag("/product/destroy") do %>
+        <input type="hidden" name="selected_item" id="send_data2">
+        <input type="submit" class="modal_close com" value="はい">
+      <% end %>
+  </div>
+</body>
+</html>

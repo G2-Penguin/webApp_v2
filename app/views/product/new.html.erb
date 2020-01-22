@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LossLess</title>
+  <link rel="stylesheet" href="../css/edit" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <center>
+  <%= form_tag("/product/create", {multipart: true}) do %>
+    <font color="white" face="Meiryo"><h1><br>LossLess<br>商品追加画面</h1></font>
+    <div style="border:none;">
+      <% if @error_message %>
+        <div class="form-error">
+        <%= @error_message %>
+        </div>
+      <% end %>
+      <br>
+    <dl>
+    <dt>商品名</dt>
+    <dd><input type="text" name="product_name" size="20" maxlength="20" autocomplete="OFF"></dd>
+    <dt>値段</dt>
+    <dd><input type="text" name="price" size="20" maxlength="5" autocomplete="OFF"></dd>
+    <dt>個数</dt>
+    <dd><input type="text" name="num" size="20" maxlength="5" autocomplete="OFF"></dd>
+    <dt>内容量</dt>
+    <dd><input type="text" name="amount" size="20" maxlength="5" autocomplete="OFF"></dd>
+    <dt>カテゴリ</dt>
+    <dd><div class="cp_ipselect cp_sl03">
+      <select name="category" required>
+        <option value="" hidden>選択してください</option>
+        <option value="1">弁当</option>
+        <option value="2">惣菜</option>
+        <option value="3">生鮮食品</option>
+      </select>
+    </div></dd>
+    <dt>画像</dt>
+    <dd style="margin-left:300px"><input name="image" type="file" accept="image/*"></dd>
+    <br><br>
+    <input class="com modal_open submit_button" data-target="con1" value="追加">
+    
+    <div id="con1" class="modal_content">
+      <p>追加しますか？</p>
+      <input class="modal_close com submit_button" value="いいえ">
+      <input type="submit" class="modal_close com" value="はい">
+    </div>
+    
+    <% end %>
+    
+    <%= link_to("/product/all_index") do %>
+     <input type="submit" class="com" value="戻る">
+   <% end %>
+ 
+   
+   </dl>
+   </div>
+  </center>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LossLess</title>
+  <link rel="stylesheet" href="edit" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <center>
+    <font color="white" face="Meiryo"><h1><br>LossLess<br>新規管理者登録画面</h1></font>
+    <div style="border:none;">
+      <br>
+      <dl>
+    <%= form_tag("/user/create") do %>
+      <dt>管理者名</dt>
+      <dd><input type="text" name="name" size="20" maxlength="10" autocomplete="OFF"></dd>
+      <dt>ユーザID</dt>
+      <dd><input type="text" name="id" size="20" maxlength="10" autocomplete="OFF"></dd>
+      <dt>パスワード</dt>
+      <dd><input type="password" name="pwd" size="20" maxlength="20" autocomplete="OFF"></dd>
+      <font color="#53B09A" size="3">確認のため、もう一度パスワードを入力してください</font><br>
+      <dt>パスワード</dt>
+      <dd><input type="password" name="pwd2" size="20" maxlength="20" autocomplete="OFF"></dd>
+    
+      <br><br>
+    
+      <input class="com submit_button modal_open" data-target="con1" value="追加">
+    
+      <div id="con1" class="modal_content">
+        <p>追加しますか？</p>
+        <input class="modal_close com submit_button" value="いいえ">
+        <input type="submit" class="modal_close com" value="はい">
+      </div>
+    
+    <% end %>
+    
+    
+    <%= link_to("/user/index") do %>
+      <input type = "submit" class="com" value = "戻る">
+    <% end %>
+    </dl>
+    
+  </center>
+  </body>
+</html>

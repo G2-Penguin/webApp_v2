@@ -1,0 +1,43 @@
+.product{
+  overflow-y: auto;
+}
+
+h1{
+  background-color: #53B09A;
+  color: white;
+  height: 200px;
+  vertical-align: middle; /* 上下中央に寄せる */
+}
+
+table {
+  margin-top:-150px;
+}
+
+/*.discount{
+  background: #53B09A;
+  color: white;
+}
+
+.all{
+  background: #53B09A;
+  color: white;
+}*/
+
+.com {
+  font-family: Meiryo;
+  float: left;
+  margin: 100px;
+  width: 150px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #53B09A;
+  border: solid 2px #53B09A;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.com:hover {
+  background: #53B09A;
+  color: white;
+}
