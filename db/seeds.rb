@@ -43,12 +43,12 @@ User.create!(user_id: "hoge",
 Product.create!(product_id: 1,
                 product_name: "hoge",
                 price: 1,
-                #discount_rate: 10,
+                discount_rate: 10,
                 category: "弁当",
                 amount: "1g",
                 count: 1,
-                #product_img: 1001, 
-                product_store: "tosa"
+                product_img: 1001, 
+                product_store: "1"
 )
 
 Categorie.create!(category_id: 1,
@@ -66,5 +66,7 @@ Categorie.create!(category_id: 3,
 Store.create!(store_id: "1",
               store_name: "tosa",
               address: "tosa",
-              tel_number: 000
+              tel_number: 000,
+              hp_url: rerefdfd,
+              store_image: fafasd
 )
