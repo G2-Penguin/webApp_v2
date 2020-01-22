@@ -51,3 +51,20 @@ Product.create!(product_id: 1,
                 product_store: "tosa"
 )
 
+Categorie.create!(category_id: 1,
+                  category_name: "弁当"
+)
+
+Categorie.create!(category_id: 2,
+                  category_name: "惣菜"
+)
+
+Categorie.create!(category_id: 3,
+                  category_name: "生鮮食品"
+)
+
+Store.create!(store_id: "1",
+              store_name: "tosa",
+              address: "tosa",
+              tel_number: 000
+)
