@@ -5,7 +5,8 @@ class UserController < ApplicationController
   end
   
   def login
-      @user = User.find_by(user_id: params[:uid], password: params[:pwd])
+    @error_message = params[:uid]
+    @user = User.find_by(user_id: params[:uid], password: params[:pwd])
     if @user
       session[:user_id] = @user.id
       if @user.is_admin != nil
@@ -13,7 +14,7 @@ class UserController < ApplicationController
       end 
       redirect_to("/product/all_index")
     else
-      @error_message = "ユーザIDまたはパスワードが間違っています"
+      #@error_message = "ユーザIDまたはパスワードが間違っています"
       @user_id = params[:uid]
       @password = params[:pwd]
       render("user/login_form")

@@ -8,7 +8,6 @@
 
 <body>
   <center>
-  <%= form_tag("/product/create", {multipart: true}) do %>
     <font color="white" face="Meiryo"><h1><br>LossLess<br>商品追加画面</h1></font>
     <div style="border:none;">
       <% if @error_message %>
@@ -16,6 +15,7 @@
         <%= @error_message %>
         </div>
       <% end %>
+      <%= form_tag("/product/create", {multipart: true}) do %>
       <br>
     <dl>
     <dt>商品名</dt>
