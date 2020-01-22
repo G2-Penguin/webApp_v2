@@ -15,8 +15,14 @@
       <input type="submit" class ="com" value="新規管理者登録">
     <% end %>
   </div>
-
-  <div class="product" style="margin-top:-170px; margin-bottom: 1.5em; width:300px;">
+  <table border="1" width="300" cellspacing="0" cellpadding="5" style="text-align:center;" >
+      <thead>
+        <tr>
+          <th>管理者名</th>
+        </tr>
+      </thead> 
+    </table>
+  <div class="product" style="margin-bottom: 1.5em; width:300px;">
     <!--<select size="10" maxlength="32" style="width:500px;" > -->
       <table border= "1" width="720" cellspacing="0" cellpadding="5" >
         <% @user.each do |user| %>
