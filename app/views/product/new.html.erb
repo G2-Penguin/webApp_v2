@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>LossLess</title>
-  <link rel="stylesheet" href="../css/edit" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="edit" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
   <center>
+  <%= form_tag("/product/create", {multipart: true}) do %>
     <font color="white" face="Meiryo"><h1><br>LossLess<br>商品追加画面</h1></font>
     <div style="border:none;">
       <% if @error_message %>
-        <div class="form-error">
+        <div class="form_error">
         <%= @error_message %>
         </div>
       <% end %>
-      <%= form_tag("/product/create", {multipart: true}) do %>
       <br>
     <dl>
     <dt>商品名</dt>
