@@ -33,14 +33,21 @@ User.create!(user_id: "admin4",
              is_admin: 1
 )
 
-Product.create!(#product_id: "",
+User.create!(user_id: "hoge",
+             admin_name: "hoge",
+             store_id: "1",
+             password: "hoge",
+             is_admin: 0
+)
+
+Product.create!(product_id: 1,
                 product_name: "hoge",
                 price: 1,
-                discount_rate: 10,
+                #discount_rate: 10,
                 category: "弁当",
                 amount: "1g",
                 count: 1,
-                product_img: 1001, 
+                #product_img: 1001, 
                 product_store: "tosa"
 )
 
