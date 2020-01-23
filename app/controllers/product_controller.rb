@@ -94,9 +94,9 @@ class ProductController < ApplicationController
   
   def search
     if params[:search_name] 
-      @product = Product.where("product_name LIKE ?", "%#{params[:search_name]}%").group(:product_name,:price).order(id: "ASC")
+      @product = Product.where("product_name LIKE ?", "%#{params[:search_name]}%").group(:id,:product_name,:price).order(id: "ASC")
     else
-      @product = Product.where("category LIKE ?", "%#{params[:search_name]}%").group(:product_name,:price).order(id: "ASC")
+      @product = Product.where("category LIKE ?", "%#{params[:search_name]}%").group(:id,:product_name,:price).order(id: "ASC")
     end
     render("product/all_index")
   end 
