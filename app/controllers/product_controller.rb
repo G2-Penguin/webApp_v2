@@ -5,7 +5,7 @@ class ProductController < ApplicationController
   
   def all_index
     user = User.find_by(id: session[:user_id])
-    @product = Product.where(product_store: user.store_id).group(:product_name,:price,:amount).order(id: "ASC")
+    @product = Product.where(product_store: user.store_id).group(:id,:product_name,:price,:amount).order(id: "ASC")
     @data = Product.new()
   end
   
