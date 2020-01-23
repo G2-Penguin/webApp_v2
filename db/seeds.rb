@@ -37,7 +37,7 @@ User.create!(user_id: "hoge",
              admin_name: "hoge",
              store_id: "1",
              password: "hoge",
-             is_admin: 0
+            # is_admin: 0
 )
 
 Product.create!(product_id: 1,
