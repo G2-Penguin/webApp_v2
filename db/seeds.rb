@@ -51,15 +51,15 @@ Product.create!(product_id: 1,
                 product_store: "1"
 )
 
-Categorie.create!(category_id: 1,
+Category.create!(category_id: 1,
                   category_name: "弁当"
 )
 
-Categorie.create!(category_id: 2,
+Category.create!(category_id: 2,
                   category_name: "惣菜"
 )
 
-Categorie.create!(category_id: 3,
+Category.create!(category_id: 3,
                   category_name: "生鮮食品"
 )
 
