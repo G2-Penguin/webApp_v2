@@ -11,7 +11,7 @@ class ProductController < ApplicationController
   
   def discounts_index
     user = User.find_by(id: session[:user_id])
-    @product = Product.where(product_store: user.store_id).where.not(discount_rate: nil).group(:product_name,:price).order(id: "ASC")
+    @product = Product.where(product_store: user.store_id).where.not(discount_rate: nil).group(:id,:product_name,:price).order(id: "ASC")
     @data = Product.new()
   end
   
