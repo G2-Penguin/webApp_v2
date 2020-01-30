@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   post "web_app/set_store" => "web_app#set_store"
   
   
-  
   get "login" => "user#login_form"
   post "login" => "user#login"
   post "logout" => "user#logout"
@@ -41,4 +40,9 @@ Rails.application.routes.draw do
   post "product/edit" => "product#edit"                                  #postに変更した。
   post "product/update" => "product#update"
   post "product/create" => "product#create"
+  
+  
+  
+  
+  post "product/demo" => "product#demo"
 end

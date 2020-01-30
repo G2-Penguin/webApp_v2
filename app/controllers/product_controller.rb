@@ -99,4 +99,16 @@ class ProductController < ApplicationController
     end
     render("product/all_index")
   end 
+  
+  def demo
+    product = Product.find_by(product_id: 99)
+    if product
+      product.destroy
+    else
+      product = Product.new(product_name: "カレーコロッケ", price: 100, amount: "100g", category: "惣菜", product_store: "1", count: 1, product_id: 99, product_img: "demo.jpg", discount_rate: 20);
+      product.save
+    end
+    redirect_to("/product/all_index")
+  end
+  
 end

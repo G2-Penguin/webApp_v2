@@ -100,6 +100,10 @@
       <% end %>
       <input type="submit" data-target="con1" class="modal_open com not_select" value="削除">
     </div>
+    
+     <%= link_to("/product/demo", method: :post) do %>
+        <input type="submit" class="com" value="追加">
+     <% end %>
   </center>
 
   <div id="con1" class="modal_content">

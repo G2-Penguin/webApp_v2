@@ -102,4 +102,5 @@ class UserController < ApplicationController
       render("user/edit")
     end
   end
+  
 end
