@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LossLess_storeSample</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="web_app" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <center>
+  <div class="Header"></div>
+    
+  <div class="Contents" style="border: none">
+    <img src="/mise.jfif" />
+    <h2>店舗名</h2>
+    <p><%= @store.store_name %> </p>
+    <h2>住所</h2>
+    <p><%= @store.address %> </p>
+    <h3>店のホームページ</h3>
+    <p><%= @store.hp_url %> </p>
+    <h3>電話番号</h3>
+    <p><%= @store.tel_number %> </p>
+    <h3>営業時間</h3>
+    <p>開店時間<%= @store.open %> </p>
+    <a>閉店時間<%= @store.close %> </a>
+  </div>
+  
+  <div class="Footer">
+  <%= link_to("/web_app/store_list") do %>
+    <img src="/return.png" class="return" />
+  <% end %>
+       
+  <%= link_to("/web_app/index") do %>
+    <img src="/product.png" class="product_img" />
+  <% end %>
+    
+  <%= link_to("/web_app/discount_index") do %>
+    <img src="/sale.png" class="sale" />
+  <% end %>
+  
+    <img src="/store_select.png" class="store" />
+  </div>
+  </center>
+  
+  </body>

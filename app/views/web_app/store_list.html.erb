@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LossLess_storeSample</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="web_app" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+<center>
+  <%= form_tag("/web_app/set_store") do %>
+  <input type="hidden" name="store_id" value="1">
+  <input type="submit" class="store_A" value="STORE_A">
+  <% end %>
+  <br>
+  <%= form_tag("/web_app/set_store") do %>
+  <input type="hidden" name="store_id" value="2">
+  <input type="submit" class="store_B" value="STORE_B">
+  <% end %>
+  <br>
+  <%= form_tag("/web_app/set_store") do %>
+  <input type="hidden" name="store_id" value="3">
+  <input type="submit" class="store_C" value="STORE_C">
+  <% end %>
+  <br>
+  <%= form_tag("/web_app/set_store") do %>
+  <input type="hidden" name="store_id" value="4">
+  <input type="submit" class="store_D" value="STORE_D">
+  <% end %>
+</center>
+    
+    
+</body>
+</html>

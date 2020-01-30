@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require_directory .
  */
 
 @import "bootstrap";
@@ -166,4 +167,32 @@ ul {
 .submit_button {
   text-align: center;
   background-color: whitesmoke;
+}
+
+.product_image {
+  width: 100%;
+  /*height: 70%;*/
+  max-width: 250px;
+  max-height: 250px;
+}
+
+
+.Header span {
+  float: right;
+  margin-right: 4%;
+}
+
+.display_none {
+  display:none;
+}
+
+#check_box {
+  margin-top: 40px;
+  margin-right: -80px;
+  float:right;
+	width: auto;
+	padding: 8px;
+	height: auto;
+	background-color: rgba(220,220,220,0.8);
+	border:none;
 }

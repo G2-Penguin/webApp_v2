@@ -26,11 +26,10 @@ class ProductController < ApplicationController
     @product = Product.new(product_name: params[:product_name], price: params[:price], amount: params[:amount], category: catego.category_name, product_store: user.store_id, count: params[:num])
       
     if params[:image]
-      image = params[:image].read
+      @product.product_img = "#{Product.last.id + 1}.jpg"
+      image = params[:image]
+      File.binwrite("public/product_images/#{@product.product_img}", image.read)
     end 
-    if image
-      @product.product_img = image
-    end
       
     #if i != num.to_i 
     if  @product.save

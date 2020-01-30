@@ -10,12 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery3
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
 
 // 確認ダイアログを見た目良くするために導入　参照https://fuchiaz.com/rails-bootstrap4/
-//= require jquery3
 //= require popper
 //= require bootstrap-sprockets
 //= require data-confirm-modal
@@ -111,4 +111,47 @@ $(document).on('turbolinks:load', function() {
 function setCategory() {
     categoryValue = document.getElementById('selectCategory').getAttribute("value");
     document.getElementById('selectCategory').options[categoryValue].selected = true;
+}
+
+/*$(function () {
+  $('.category').click(function() { 
+    if ($(this).attr('class') == 'selected') {
+      // メニュー非表示
+      $(this).removeClass('selected').next('ul').slideUp('fast');
+    } else {
+      // 表示しているメニューを閉じる
+      $('.category').removeClass('selected');
+      $('ul').hide();
+
+      // メニュー表示
+      $(this).addClass('selected').next('ul').slideDown('fast');
+    }    
+  });
+  
+  // マウスカーソルがメニュー上/メニュー外
+  $('.category,ul').hover(function(){
+    over_flg = true;
+  }, function(){
+    over_flg = false;
+  });  
+  
+  // メニュー領域外をクリックしたらメニューを閉じる
+  $('body').click(function() {
+    if (over_flg == false) {
+      $('.category').removeClass('selected');
+      $('ul').slideUp('fast');
+    }
+  });
+});*/
+
+function show_category(){
+	const tmp = document.getElementById("check_box");
+
+	if(tmp.style.display=="block"){
+		// noneで非表示
+		tmp.style.display ="none";
+	}else{
+		// blockで表示
+		tmp.style.display ="block";
+	}
 }

@@ -1,0 +1,37 @@
+$("#show_products").html("
+<% @products.each_slice(2) do |p1, p2| %>
+    <div style="height:70%; margin: 1%; width: 48%; float:left; border: none;">
+      
+      <% if p1.product_img %>
+        <img src="/product_images/<%= p1.product_img %>" class="product_image" />
+      <% else %>
+        <img src="/product_images/noimage.png" class="product_image" />
+      <% end %>
+      <br>
+      <a><%= p1.product_name %></a>
+      <% if p1.discount_rate %>
+        <p style="color:Red;">￥<%= p1.price - p1.price * p1.discount_rate / 100 %></p>
+      <% else %>
+        <p>￥<%= p1.price %></p>
+      <% end %>
+    </div>
+    
+    <% if p2 %>
+      <div style="height:70%; margin: 1%; width: 48%; float:right; border: none">
+      
+        <% if p2.product_img %>
+          <img src="/product_images/<%= p2.product_img %>" class="product_image" />
+        <% else %>
+          <img src="/product_images/noimage.png" class="product_image" />
+        <% end %>
+        <br>
+        <a><%= p2.product_name %></a>      
+        <% if p2.discount_rate %>
+          <p style="color:Red;">￥<%= p2.price - p2.price * p2.discount_rate / 100 %></p>
+        <% else %>
+          <p>￥<%= p2.price %></p>
+        <% end %>
+      </div>
+    <% end %>
+<% end %>
+");

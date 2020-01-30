@@ -1,0 +1,231 @@
+// Place all the styles related to the web_app controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//パソコン用
+@media screen and (max-width:3000px) { 
+.store_A {
+  margin-top:50px;
+  font-family: Meiryo;
+  width: 400px;
+  height: 100px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #E65032;
+  border: solid 2px #E65032;
+  border-radius: 3px;
+  transition: .4s;  
+}
+
+.store_B {
+  font-family: Meiryo;
+  width: 400px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #53B09A;
+  border: solid 2px #53B09A;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.store_C {
+  font-family: Meiryo;
+  width: 400px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #FF9F40;
+  border: solid 2px #FF9040;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.store_D {
+  font-family: Meiryo;
+  width: 400px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: gray;
+  background: #FFCC66;
+  border: solid 2px #FFCC66;
+  border-radius: 3px;
+  transition: .4s;    
+}
+
+//index
+body{
+  margin: 20px; /* bodyの外側の余白を指定する */
+  padding: 50px 10px 80px 10px; /* bodyの内側の余白を指定する */
+}
+
+.Header {
+  position: fixed; /* ヘッダーを固定する */
+  top: 0; /* 上部から配置の基準位置を決める */
+  left: 0; /* 左から配置の基準位置を決める */
+  width: 100%; /* ヘッダーの横幅を指定する */
+  height: 50px; /* ヘッダーの高さを指定する */
+  padding: 10px; /* ヘッダー内側の余白を指定する(上下左右) */
+  background-color: #53B09A; /* ヘッダーの背景色を指定する */
+  color: white; /* ヘッダーのフォントの色を指定する */
+}
+
+.Footer {
+  position: fixed; /* フッターを固定する */
+  bottom: 0; /* 上部から配置の基準位置を決める */
+  left: 0; /* 左から配置の基準位置を決める */
+  width: 100%; /* フッターの横幅を指定する */
+  height: 100px; /* フッターの高さを指定する */
+  padding: 10px; /* フッター内側の余白を指定する(上下左右) */
+  background-color: #53B09A; /* フッターの背景色を指定する */
+  color: #FFFFFF; /* フッターのフォントの色を指定する */
+}
+.Contents {
+  width: 100%; /* コンテンツの横幅を指定する */
+}
+
+}
+
+
+
+/*スマホ用*/
+@media screen and (max-width:380px) { 
+  //store_list
+.store_A {
+  font-size:150%;
+  margin-top:-30px;
+  font-family:'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  width: 90%;
+  height: 100px;
+  margin-bottom: 5px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #53B09A;
+  border: solid 2px #53B09A;
+  border-radius: 3px;
+  transition: .4s;  
+}
+
+.store_B {
+  font-size:150%;
+  font-family:'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  width: 90%;
+  height: 100px;
+  margin: 5px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #E65032;
+  border: solid 2px #E65032;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.store_C {
+  font-size:150%;
+  font-family:'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  width: 90%;
+  height: 100px;
+  margin: 5px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #FF9F40;
+  border: solid 2px #FF9040;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.store_D {
+  font-size:150%;
+  font-family:'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  width: 90%;
+  height: 100px;
+  margin: 5px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: gray;
+  background: #FFCC66;
+  border: solid 2px #FFCC66;
+  border-radius: 3px;
+  transition: .4s;    
+}
+
+
+//index
+body{
+  margin: 20px; /* bodyの外側の余白を指定する */
+  padding: 50px 10px 50px 10px; /* bodyの内側の余白を指定する */
+}
+
+.Header {
+  position: fixed; /* ヘッダーを固定する */
+  top: 0; /* 上部から配置の基準位置を決める */
+  left: 0; /* 左から配置の基準位置を決める */
+  width: 100%; /* ヘッダーの横幅を指定する */
+  height: 50px; /* ヘッダーの高さを指定する */
+  padding: 10px; /* ヘッダー内側の余白を指定する(上下左右) */
+  background-color: #53B09A; /* ヘッダーの背景色を指定する */
+  color: white; /* ヘッダーのフォントの色を指定する */
+}
+
+.category {
+  float:right;
+}
+
+.Footer {
+  position: fixed; /* フッターを固定する */
+  bottom: 0; /* 上部から配置の基準位置を決める */
+  left: 0; /* 左から配置の基準位置を決める */
+  width: 100%; /* フッターの横幅を指定する */
+  height: 80px; /* フッターの高さを指定する */
+  padding: 10px; /* フッター内側の余白を指定する(上下左右) */
+  background-color: #53B09A; /* フッターの背景色を指定する */
+  color: #FFFFFF; /* フッターのフォントの色を指定する */
+}
+.Contents {
+  width: 100%; /* コンテンツの横幅を指定する */
+  /*margin-bottom: 700px;*/
+  width: 100%;
+  height: 430px;
+  overflow: scroll;
+}
+
+}
+
+.return {
+  width: 60px;
+  margin-top: 7px;
+  margin-left: -10px;
+}
+
+.product_img {
+  width: 70px;
+  margin-left:10px;
+}
+
+.sale {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.store {
+  width: 70px;
+}
