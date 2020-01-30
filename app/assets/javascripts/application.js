@@ -145,8 +145,7 @@ function setCategory() {
 });*/
 
 function show_category(){
-	const tmp = document.getElementById("check_box");
-
+	var tmp = document.getElementById("check_box");
 	if(tmp.style.display=="block"){
 		// noneで非表示
 		tmp.style.display ="none";
