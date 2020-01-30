@@ -2,7 +2,6 @@ class WebAppController < ApplicationController
     
     def index
         @products = Product.where(product_store: session[:store_id])
-        @count=99
     end
     
     def search_category
